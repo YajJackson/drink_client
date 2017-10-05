@@ -1,0 +1,14 @@
+input {
+  color: rgba(35, 35, 35, 0.82) !important;
+}
+
+.form_header {
+  width: 100%;
+  background-color: grey;
+}
+.mdl-grid {
+  padding: 0px;
+}
+.fit {
+  width: 100%;
+}
