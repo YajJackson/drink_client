@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import axios from 'axios'
 import './form.css'
 
 export default class Form extends Component {
@@ -22,7 +23,20 @@ export default class Form extends Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    console.log(this.state)
+
+    let postData = {
+      name: this.state.name,
+      calories: this.state.calories,
+      sugar: this.state.sugar
+    }
+
+    axios.post('http://localhost:3001/coke', postData)
+    .then(response => console.log(response))
+    .catch(error => console.log(error))
+
+    // axios.get('http://localhost:3001/coke')
+    // .then(response => console.log(response))
+    // .catch(error => console.log(error))
   }
 
   render(){
